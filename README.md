@@ -1,5 +1,8 @@
 # Minimal-Polynomial
-one possible algorithm to calculate the minimal polynomial of a matrix
+One possible algorithm to calculate the minimal polynomial of a matrix
+"Matrix.swift" comes from the repository "Matrix: A fast matrix type for Swift" of @hollance
+I added several methods to it like gauss(), rank(), determinant()...
+The code can be built successfully by using Swift 3.0
 
 For a square matrix belongs to Mn(F) (F represents a field, a concept in abstract algebra), there must be some polynomials which belong to F[t] (and it's not "0") can make it be the zero matrix, and we call these polynomials "annihilator polynomials of square matrix A". This means that if you put A into these polynomials to replace the original undetermined element, you will get the zero matrix.
 
