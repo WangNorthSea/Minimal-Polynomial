@@ -9,4 +9,4 @@ Usually, it's not easy to calculate the minimal polynomial of a square matrix A.
 
 However, these two algorithms are too obscure ,and it's very hard to describe them accurately to make a steady algorithm for computers. To solve this problem, I came up with an algorithm which is easy to be described by programming languages (and I have made it come true by using Swift).
 
-Let me use any 3-order square matrix to introduce this algorithm for you, and we call such a matrix "A".
+Let me use a random 3-order square matrix to introduce this algorithm for you, and we call such a matrix "A".
