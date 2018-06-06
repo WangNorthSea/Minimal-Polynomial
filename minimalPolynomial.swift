@@ -302,18 +302,23 @@ public func minimalPolynomial(_ matrix: Matrix) -> [Double] {
     
     // processing error
     for i in 0..<result.count {
-            if fabs(result[i]) - fabs(Double(Int(result[i]))) < 0.000000001 || fabs(result[i]) - fabs(Double(Int(result[i])) + 1) < 0.000000001 || fabs(result[i]) - fabs(Double(Int(result[i])) - 1) < 0.000000001 {
-                if fabs(result[i]) - fabs(Double(Int(result[i]))) < 0.000000001 && fabs(result[i]) - fabs(Double(Int(result[i]))) > 0 {
-                    result[i] = Double(Int(result[i]))
-                }
-                else if fabs(result[i]) - fabs(Double(Int(result[i])) + 1) < 0.000000001 && fabs(result[i]) - fabs(Double(Int(result[i])) + 1) > 0 {
-                    result[i] = Double(Int(result[i])) + 1
-                }
-                else if fabs(result[i]) - fabs(Double(Int(result[i])) - 1) < 0.000000001 && fabs(result[i]) - fabs(Double(Int(result[i])) - 1) > 0 {
+        if fabs(result[i]) - fabs(Double(Int(result[i]))) < 0.000001 || fabs(result[i]) - (fabs(Double(Int(result[i]))) + 1) < 0.000001 || fabs(result[i]) - (fabs(Double(Int(result[i]))) - 1) < 0.000001 {
+            if fabs(result[i]) - fabs(Double(Int(result[i]))) < 0.000001 && fabs(result[i]) - fabs(Double(Int(result[i]))) > -0.000001 {
+                result[i] = Double(Int(result[i]))
+            }
+            else if fabs(result[i]) - (fabs(Double(Int(result[i]))) + 1) < 0.000001 && fabs(result[i]) - (fabs(Double(Int(result[i]))) + 1) > -0.000001 {
+                if result[i] < 0 {
                     result[i] = Double(Int(result[i])) - 1
                 }
+                else {
+                    result[i] = Double(Int(result[i])) + 1
+                }
+            }
+            else if fabs(result[i]) - (fabs(Double(Int(result[i]))) - 1) < 0.000001 && fabs(result[i]) - (fabs(Double(Int(result[i]))) - 1) > -0.000001 {
+                result[i] = Double(Int(result[i])) + 1
             }
         }
+    }
     
     return result  // "result" is the array which contains the value of each undetermined element x, or in other words,
                    // the coefficient of each item in the minimal polynomial of "matrix"
