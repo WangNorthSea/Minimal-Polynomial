@@ -1,4 +1,4 @@
-// Copyright 2018 Haoyu Wang, the University of Chinese Academy of Sciences
+// Copyright 2018 Haoyu Wang, University of Chinese Academy of Sciences
 
 import Foundation
 
