@@ -7,7 +7,7 @@ I added several methods to it like gauss(), rank(), determinant()...
 
 The code can be built successfully by using Swift 3.0
 
-For a square matrix belongs to Mn(F) (F represents a field, a concept in abstract algebra), there must be some polynomials which belong to F[t] ("0" is excluded from them) can make it be the zero matrix, and we call these polynomials "annihilator polynomials of square matrix A". This means that if you put A into these polynomials to replace the original undetermined element, you will get the zero matrix.
+For a square matrix belonging to Mn(F) (F represents a field, a concept in abstract algebra), there must be some polynomials which belong to F[t] ("0" is excluded from them) can make it be the zero matrix, and we call these polynomials "annihilator polynomials of square matrix A". This means that if you put A into these polynomials to replace the original undetermined element, you will get the zero matrix.
 
 We can prove that there must be a polynomial which belongs to the set of annihilator polynomials of square matrix A has the lowest degree and the coefficient of its term which has the highest degree is 1, and we call this polynomial "the minimal polynomial of square matrix A".
 
